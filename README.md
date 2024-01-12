@@ -30,17 +30,19 @@ Command-line parameters:
 
     ./EntraForcePasswordChange.ps1 [-TenantId] <String> [-UserPrincipalName] <String> [-Noop]
 
-Reset passwords for all (non-guest) users:
+Test resetting passwords for all (non-guest) users:
 
     ./EntraForcePasswordChange -TenantId <tenant-id> -Noop -UserPrincipalName "*"
 
-Reset password for a specific user:
+Test resetting password for a specific user:
 
     ./EntraForcePasswordChange -TenantId <tenant-id> -Noop -UserPrincipalName "john.doe@acme.org"
 
-Reset password for all users in a specific domain:
+Test resetting password for all users in a specific domain:
 
     ./EntraForcePasswordChange -TenantId <tenant-id> -Noop -UserPrincipalName "*@acme.org"
+
+Remove the -Noop switch to actually reset the passwords and force logout.
 
 ## Getting help
 

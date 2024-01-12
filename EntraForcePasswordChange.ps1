@@ -23,19 +23,21 @@
 .PARAMETER Noop
     Only show what changes would be made.
 .EXAMPLE
-    Reset passwords for all (non-guest) users:
+    Test resetting passwords for all (non-guest) users:
 
     ForcePasswordChange -TenantId <tenant-id> -Noop -UserPrincipalName "*"
+.EXAMPLE
+    Reset passwords for all (non-guest) users:
 
+    ForcePasswordChange -TenantId <tenant-id> -UserPrincipalName "*"
 .EXAMPLE
     Reset password for a specific user:
 
-    ForcePasswordChange -TenantId <tenant-id> -Noop -UserPrincipalName "john.doe@acme.org"
-
+    ForcePasswordChange -TenantId <tenant-id> -UserPrincipalName "john.doe@acme.org"
 .EXAMPLE
     Reset password for all users in a specific domain:
 
-    ForcePasswordChange -TenantId <tenant-id> -Noop -UserPrincipalName "*@acme.org"
+    ForcePasswordChange -TenantId <tenant-id> -UserPrincipalName "*@acme.org"
 #>
 param (
   [Parameter(Mandatory=$true)]
